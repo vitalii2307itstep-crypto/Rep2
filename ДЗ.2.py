@@ -3,6 +3,7 @@ import random
 class Cipher:
     def __init__(self, number):
         self.__number = number
+        self.calculate()
 
     def calculate(self):
         i = random.randint(7,20)
@@ -13,7 +14,6 @@ class Cipher:
 
 number = int(input("Enter a number:"))
 cipher = Cipher(number)
-cipher.calculate()
 print(cipher)
 while True:
     pas = input("\nEnter password: ")
