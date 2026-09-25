@@ -6,11 +6,14 @@ class Cipher:
         self.calculate()
 
     def calculate(self):
+        x = random.choice(['*', '/'])
         i = random.randint(7,20)
-        self.__number *= i
+        if x == '*':
+            self.__number *= i
+        elif x == '/':
+            self.__number /= i
     def __str__(self):
         return str(self.__number)
-
 
 number = int(input("Enter a number:"))
 cipher = Cipher(number)
