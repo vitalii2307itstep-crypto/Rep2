@@ -10,6 +10,6 @@ for key in data:
     try:
          res = divider(key, data[key])
          result.append(res)
-    except (ValueError, IndexError, ZeroDivisionError, TypeError):
-        print("Помилка")
+    except (ValueError, IndexError, ZeroDivisionError, TypeError)as e:
+        print("error", type(e).__name__)
 print(result)
